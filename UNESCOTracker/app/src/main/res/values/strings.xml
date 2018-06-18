@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">UNESCO Tracker</string>
+
+    <string name="unesco_nav_string">UNESCO</string>
+    <string name="tracker_nav_string">Tracker</string>
+    <string name="unesco_logo_string">UNESCO Logo</string>
+
+    <string name="search_string">Search</string>
+    <string name="filter_string">Filter</string>
+    <string name="sort_string">Sort by\u2026</string>
+
+    <string name="sites_nav_string">All Sites</string>
+    <string name="bucket_nav_string">Bucket List</string>
+    <string name="visited_nav_string">Visited</string>
+    <string name="settings_nav_string">Settings</string>
+
 </resources>

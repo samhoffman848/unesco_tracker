@@ -4,13 +4,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:padding="@dimen/list_padding"
+    android:background="@color/colorPrimaryLight">
 
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        app:srcCompat="@android:drawable/btn_star" />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/thumbnail_view"
+        android:layout_width="@dimen/thumbnail_size"
+        android:layout_height="@dimen/thumbnail_size"
+        android:layout_marginEnd="@dimen/list_padding"
+        app:civ_border_width="3dp"
+        app:civ_border_color="@color/colorAccentLight"
+        android:src="@mipmap/ic_launcher"/>
 
     <LinearLayout
         android:layout_width="0dp"
@@ -19,34 +24,38 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/site_name_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp"
             android:text="TextView"/>
 
         <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:id="@+id/site_location_view"
+            style="@style/site_location_text"
             android:text="TextView"/>
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:id="@+id/distance_view"
+            style="@style/site_location_text"
             android:text="TextView"/>
     </LinearLayout>
 
     <ToggleButton
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Fav" />
+        android:id="@+id/favourite_toggle"
+        style="@style/list_toggle_button"
+        android:background="@drawable/favourite_selector"
+        android:backgroundTint="@color/colorPrimaryDark"/>
 
     <ToggleButton
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Been" />
+        android:id="@+id/visited_toggle"
+        style="@style/list_toggle_button"
+        android:background="@drawable/visited_selector"
+        android:backgroundTint="@color/colorPrimaryDark"/>
 
 </LinearLayout>

@@ -2,7 +2,16 @@
 <resources>
     <color name="colorPrimary">#37474F</color>
     <color name="colorPrimaryDark">#263238</color>
-    <color name="colorPrimaryLight">#78909C</color>
+    <color name="colorPrimaryMid">#455A64</color>
+    <color name="colorPrimaryLight">#B0BEC5</color>
     <color name="colorAccent">#FF3D00</color>
     <color name="colorAccentLight">#FF6E40</color>
+
+    <color name="menu_item">#CFD8DC</color>
+
+    <!-- Text color for the details of the site in the list item -->
+    <color name="location_text_colour">#B4BAC0</color>
+
+    <!-- Text color for the primary location of the site in the list item -->
+    <color name="site_text_colour">#2B3D4D</color>
 </resources>
