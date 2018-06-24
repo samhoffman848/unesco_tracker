@@ -8,6 +8,7 @@
     <color name="colorAccentLight">#FF6E40</color>
 
     <color name="menu_item">#CFD8DC</color>
+    <color name="list_background">#ECEFF1</color>
 
     <!-- Text color for the details of the site in the list item -->
     <color name="location_text_colour">#B4BAC0</color>

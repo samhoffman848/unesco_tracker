@@ -5,11 +5,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="@dimen/list_padding"
-    android:background="@color/colorPrimaryLight">
+    android:paddingStart="@dimen/list_padding_side"
+    android:paddingEnd="@dimen/list_padding_side"
+    android:paddingTop="@dimen/list_padding"
+    android:paddingBottom="@dimen/list_padding"
+    android:background="@color/list_background">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/thumbnail_view"
+        android:layout_marginTop="@dimen/thumb_margin"
+        android:layout_marginBottom="@dimen/thumb_margin"
         android:layout_width="@dimen/thumbnail_size"
         android:layout_height="@dimen/thumbnail_size"
         android:layout_marginEnd="@dimen/list_padding"
@@ -26,8 +31,7 @@
         <TextView
             android:id="@+id/site_name_view"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:maxLines="2"
             android:ellipsize="end"

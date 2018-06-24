@@ -6,9 +6,10 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/toolbar_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -28,6 +29,7 @@
             android:id="@+id/tab_widget"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
             app:tabMode="fixed"
             android:background="@color/colorPrimary"
             app:tabSelectedTextColor="@android:color/white"
@@ -37,9 +39,18 @@
         <android.support.v4.view.ViewPager
             android:id="@+id/view_pager"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tab_widget"/>
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/empty_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium"/>
+    </RelativeLayout>
 
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
@@ -54,5 +65,7 @@
         app:itemBackground="@drawable/nav_background_selected"
         app:itemIconTint="@drawable/nav_icon_selected"
         app:itemTextColor="@drawable/nav_text_selected" />
+
+
 </android.support.v4.widget.DrawerLayout>
 

@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <provider
+            android:authorities="com.example.android.UNESCOTracker"
+            android:name=".data.SiteProvider"
+            android:exported="false"/>
     </application>
 
 </manifest>
