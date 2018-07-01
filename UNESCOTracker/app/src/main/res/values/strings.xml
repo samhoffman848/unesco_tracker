@@ -14,4 +14,32 @@
     <string name="visited_nav_string">Visited</string>
     <string name="settings_nav_string">Settings</string>
 
+    <!-- Settings -->
+    <string name="settings_data_title">World Heritage Site Data</string>
+    <string name="settings_update_db_title">Update Site Data</string>
+    <string name="settings_update_db_summary">Update database from World Heritage Site</string>
+    <string name="settings_backup_title">Backup Data</string>
+    <string name="settings_backup_summary">Backup World Heritage Site information locally</string>
+    <string name="settings_restore_title">Restore Data</string>
+    <string name="settings_restore_summary">Restore World Heritage Site from local file</string>
+    <string name="settings_visited_title">Clear Visited</string>
+    <string name="settings_visited_summary">Mark all sites as not visited</string>
+    <string name="settings_fav_title">Clear Favourites</string>
+    <string name="settings_fav_summary">Remove all sites from your favourites</string>
+
+    <string name="settings_loc_title">World Heritage Site Data</string>
+    <string name="settings_distance_title">Distance Units</string>
+    <string name="settings_distance_km">Kilometers</string>
+    <string name="settings_distance_m">Miles</string>
+    <string name="settings_distance_list_title">Select Units</string>
+    <string name="settings_device_loc_key" translatable="false">use_device_loc_pref</string>
+    <string name="settings_device_loc_title">Use device location?</string>
+    <string name="settings_location_title">Location</string>
+    <string name="settings_location_default" translatable="false">London, UK</string>
+
+    <string name="settings_app_title">App Misc</string>
+    <string name="settings_theme_title">Use Dark Theme?</string>
+
+    <string name="update_db_toast">Updating Database, please wait.</string>
+
 </resources>

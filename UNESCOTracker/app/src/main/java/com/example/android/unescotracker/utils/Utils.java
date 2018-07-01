@@ -1,6 +1,8 @@
 package com.example.android.unescotracker.utils;
 
 public final class Utils {
+    public static final String LOG_TAG = Utils.class.getSimpleName();
+
     public static String mapIntRegion(int region){
         switch (region){
             case 0:

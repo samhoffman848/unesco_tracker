@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/settings_nav_string">
+
+    <PreferenceCategory android:title="@string/settings_data_title">
+        <Preference
+            android:key="update_db_pref"
+            android:title="@string/settings_update_db_title"
+            android:summary="@string/settings_update_db_summary">
+        </Preference>
+        <Preference
+            android:key="backup_db_pref"
+            android:title="@string/settings_backup_title"
+            android:summary="@string/settings_backup_summary">
+        </Preference>
+        <Preference
+            android:key="restore_db_pref"
+            android:title="@string/settings_restore_title"
+            android:summary="@string/settings_restore_summary">
+        </Preference>
+        <Preference
+            android:key="clear_visited_pref"
+            android:title="@string/settings_visited_title"
+            android:summary="@string/settings_visited_summary">
+        </Preference>
+        <Preference
+            android:key="clear_fav_pref"
+            android:title="@string/settings_fav_title"
+            android:summary="@string/settings_fav_summary">
+        </Preference>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_loc_title">
+        <ListPreference
+            android:key="distance_unit_pref"
+            android:title="@string/settings_distance_title"
+            android:summary="%s"
+            android:dialogTitle="@string/settings_distance_list_title"
+            android:entries="@array/distance_units_titles_list"
+            android:entryValues="@array/distance_units_values_list"/>
+        <SwitchPreference
+            android:key="@string/settings_device_loc_key"
+            android:title="@string/settings_device_loc_title"
+            android:disableDependentsState="true"
+            android:defaultValue="false" />
+        <com.example.android.unescotracker.ui.EditTextPreference
+            android:key="manual_loc_pref"
+            android:title="@string/settings_location_title"
+            android:defaultValue="@string/settings_location_default"
+            android:inputType="text"
+            android:selectAllOnFocus="true"
+            android:dependency="@string/settings_device_loc_key"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_app_title">
+        <SwitchPreference
+            android:key="dark_theme_pref"
+            android:title="@string/settings_theme_title"
+            android:defaultValue="false" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

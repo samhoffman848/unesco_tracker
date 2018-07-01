@@ -14,13 +14,121 @@
         android:id="@+id/filter_button"
         android:icon="@drawable/ic_filter"
         android:title="@string/filter_string"
-        android:orderInCategory="2"/>
+        android:orderInCategory="2"
+        app:showAsAction="ifRoom">
+        <menu>
+            <group android:checkableBehavior="all">
+                <item android:id="@+id/menu_category_title"
+                    android:titleCondensed="Category"
+                    android:title="Category"
+                    android:checkable="false">
+                </item>
+                <item android:id="@+id/menu_cultural_item"
+                    android:titleCondensed="Cultural"
+                    android:title="Cultural"
+                    android:checkable="true">
+                </item>
+                <item android:id="@+id/menu_natural_item"
+                    android:titleCondensed="Natural"
+                    android:title="Natural"
+                    android:checkable="true">
+                </item>
+                <item android:id="@+id/menu_mixed_item"
+                    android:titleCondensed="Mixed"
+                    android:title="Mixed"
+                    android:checkable="true">
+                </item>
+            </group>
+
+            <group android:checkableBehavior="all">
+                <item android:id="@+id/title"
+                    android:titleCondensed="Region"
+                    android:title="Region"
+                    android:checkable="false">
+                </item>
+                <item android:id="@+id/item1"
+                    android:titleCondensed="Africa"
+                    android:title="Africa"
+                    android:checkable="true">
+                </item>
+                <item android:id="@+id/item2"
+                    android:titleCondensed="Arab States"
+                    android:title="Arab States"
+                    android:checkable="true">
+                </item>
+                <item android:id="@+id/item3"
+                    android:titleCondensed="Asia and the Pacific"
+                    android:title="Asia and the Pacific"
+                    android:checkable="true">
+                </item>
+                <item android:id="@+id/item4"
+                    android:titleCondensed="Europe and North America"
+                    android:title="Europe and North America"
+                    android:checkable="true">
+                </item>
+                <item android:id="@+id/item5"
+                    android:titleCondensed="Latin America and the Caribbean"
+                    android:title="Latin America and the Caribbean"
+                    android:checkable="true">
+                </item>
+            </group>
+
+            <group android:checkableBehavior="all">
+                <item android:id="@+id/menu_misc_title"
+                    android:titleCondensed="Misc"
+                    android:title="Misc"
+                    android:checkable="false">
+                </item>
+                <item android:id="@+id/menu_endangered_item"
+                    android:titleCondensed="Endangered"
+                    android:title="Endangered"
+                    android:checkable="true">
+                </item>
+                <item android:id="@+id/menu_visited_item"
+                    android:titleCondensed="Visited"
+                    android:title="Visited"
+                    android:checkable="true">
+                </item>
+            </group>
+        </menu>
+    </item>
 
     <item
         android:id="@+id/sort_button"
         android:icon="@drawable/sort_item"
         android:title="@string/sort_string"
-        android:orderInCategory="3"/>
+        android:orderInCategory="3"
+        app:showAsAction="ifRoom">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/menu_site_asc_item"
+                    android:titleCondensed="Site Ascending"
+                    android:title="Site Ascending"
+                    android:checkable="true">
+                </item>
+                <item android:id="@+id/menu_site_desc_item"
+                    android:titleCondensed="Site Descending"
+                    android:title="Site Descending"
+                    android:checkable="true">
+                </item>
+                <item android:id="@+id/menu_nearest_item"
+                    android:titleCondensed="Nearest"
+                    android:title="Nearest"
+                    android:checkable="true">
+                </item>
+                <item android:id="@+id/menu_region_item"
+                    android:titleCondensed="Region"
+                    android:title="Region"
+                    android:checkable="true">
+                </item>
+                <item android:id="@+id/menu_category_item"
+                    android:titleCondensed="Category"
+                    android:title="Category"
+                    android:checkable="true">
+                </item>
+            </group>
+        </menu>
+    </item>
 
 
 

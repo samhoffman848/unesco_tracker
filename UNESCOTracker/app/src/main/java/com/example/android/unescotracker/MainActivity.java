@@ -1,6 +1,7 @@
 package com.example.android.unescotracker;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.net.Uri;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
@@ -12,17 +13,23 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import com.example.android.unescotracker.data.DatabaseManager;
 import com.example.android.unescotracker.data.SiteContract.SiteEntry;
 import com.example.android.unescotracker.utils.Utils;
+import com.example.android.unescotracker.utils.XmlUtils;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity implements SiteListFragment.FragmentListListener{
+    private static String LOG_TAG = "UNESCO_Tracker";
+
     SiteListFragment mSiteListFragment;
     public SimpleFragmentPagerAdapter mAdapter;
 
@@ -46,15 +53,27 @@ public class MainActivity extends AppCompatActivity implements SiteListFragment.
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(MenuItem menuItem) {
-                        // set item as selected to persist highlight
-                        menuItem.setChecked(true);
                         // close drawer when item is tapped
                         mDrawerLayout.closeDrawers();
 
-                        // Add code here to update the UI based on the item selected
-                        // For example, swap UI fragments here
+                        int id = menuItem.getItemId();
+                        switch (id) {
+                            case R.id.menu_all_items:
+                                menuItem.setChecked(true);
+                                return true;
+                            case R.id.menu_favourited:
+                                menuItem.setChecked(true);
+                                return true;
+                            case R.id.menu_visited:
+                                menuItem.setChecked(true);
+                                return true;
+                            case R.id.menu_settings:
+                                Intent settingsIntent = new Intent(MainActivity.this, SettingsActivity.class);
+                                startActivity(settingsIntent);
+                                return true;
+                        }
 
-                        return true;
+                        return false;
                     }
                 });
 
@@ -128,7 +147,6 @@ public class MainActivity extends AppCompatActivity implements SiteListFragment.
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.app_menu, menu);
-
         return true;
     }
 
@@ -147,7 +165,7 @@ public class MainActivity extends AppCompatActivity implements SiteListFragment.
                 return true;
             case R.id.filter_button:
                 //Todo: add filter functionality
-                return true;
+                return false;
             case R.id.sort_button:
                 //Todo: add sort functionality
                 return true;
