@@ -6,7 +6,8 @@ import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CursorAdapter;
+import android.support.v4.widget.CursorAdapter;
+import android.widget.Filterable;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
@@ -20,7 +21,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
  * that uses a {@link Cursor} of pet data as its data source. This adapter knows
  * how to create list items for each row of pet data in the {@link Cursor}.
  */
-public class SiteCursorAdapter extends CursorAdapter {
+public class SiteCursorAdapter extends CursorAdapter{
 
     /**
      * Constructs a new {@link SiteCursorAdapter}.
@@ -47,7 +48,7 @@ public class SiteCursorAdapter extends CursorAdapter {
     }
 
     /**
-     * This method binds the pet data (in the current row pointed to by cursor) to the given
+     * This method binds the site data (in the current row pointed to by cursor) to the given
      * list item layout. For example, the name for the current pet can be set on the name TextView
      * in the list item layout.
      *

@@ -150,9 +150,11 @@
             android:id="@+id/url_details_view"
             style="@style/details_text"
             android:paddingTop="@dimen/list_padding"
+            android:paddingBottom="@dimen/list_padding"
             android:text="url link"/>
 
         <com.github.florent37.expansionpanel.ExpansionHeader
+            android:id="@+id/expandable_details_view"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             app:expansion_headerIndicator="@id/headerIndicator"
@@ -164,7 +166,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:paddingTop="@dimen/list_padding"
                 android:paddingBottom="@dimen/list_padding"
                 android:textColor="@color/location_text_colour"
                 android:text="@string/details_read_more"/>

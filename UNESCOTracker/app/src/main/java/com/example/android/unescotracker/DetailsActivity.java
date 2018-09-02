@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.example.android.unescotracker.data.SiteContract.SiteEntry;
 import com.example.android.unescotracker.utils.Utils;
+import com.github.florent37.expansionpanel.ExpansionHeader;
 
 public class DetailsActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor>{
     private static final int SITE_LOADER = 0;
@@ -155,20 +156,30 @@ public class DetailsActivity extends AppCompatActivity implements LoaderManager.
             mUrlText.setText(Html.fromHtml(url));
             mUrlText.setMovementMethod(LinkMovementMethod.getInstance());
             mUrlText.setLinksClickable(true);
-            mLongDescText.setText(Html.fromHtml(longDesc));
 
-            if (!historicalDesc.equals("")){
-                mHistoricalDescText.setText(Html.fromHtml(historicalDesc));
-            } else {
-                mHistoricalDescText.setVisibility(View.GONE);
-                mHistoricalTitleText.setVisibility(View.GONE);
-            }
+            if (!longDesc.equals("") || !historicalDesc.equals("") || !justification.equals("")) {
+                if (!longDesc.equals("")) {
+                    mLongDescText.setText(Html.fromHtml(longDesc));
+                } else {
+                    mLongDescText.setVisibility(View.GONE);
+                }
 
-            if (!justification.equals("")){
-                mJustificationText.setText(Html.fromHtml(justification));
+                if (!historicalDesc.equals("")) {
+                    mHistoricalDescText.setText(Html.fromHtml(historicalDesc));
+                } else {
+                    mHistoricalDescText.setVisibility(View.GONE);
+                    mHistoricalTitleText.setVisibility(View.GONE);
+                }
+
+                if (!justification.equals("")) {
+                    mJustificationText.setText(Html.fromHtml(justification));
+                } else {
+                    mJustificationText.setVisibility(View.GONE);
+                    mJustificationTitleText.setVisibility(View.GONE);
+                }
             } else {
-                mJustificationText.setVisibility(View.GONE);
-                mJustificationTitleText.setVisibility(View.GONE);
+                ExpansionHeader expansionView = (ExpansionHeader) findViewById(R.id.expandable_details_view);
+                expansionView.setVisibility(View.GONE);
             }
 
             mLocText.setText(Html.fromHtml(location));
