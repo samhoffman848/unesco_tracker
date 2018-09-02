@@ -23,8 +23,8 @@
     </style>
 
     <style name="list_toggle_button">
-        <item name="android:layout_width">@dimen/toogle_size</item>
-        <item name="android:layout_height">@dimen/toogle_size</item>
+        <item name="android:layout_width">@dimen/toggle_size</item>
+        <item name="android:layout_height">@dimen/toggle_size</item>
         <item name="android:layout_gravity">center_vertical</item>
         <item name="android:layout_marginStart">@dimen/toggle_padding</item>
         <item name="android:layout_marginEnd">@dimen/toggle_padding</item>
@@ -56,6 +56,65 @@
 
     <style name="MyActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
         <item name="background">@color/colorPrimary</item>
+    </style>
+
+    <style name="details_icon_list">
+        <item name="android:layout_width">@dimen/details_icon_size</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="details_icon">
+        <item name="android:layout_width">@dimen/thumbnail_size</item>
+        <item name="android:layout_height">@dimen/thumbnail_size</item>
+    </style>
+
+    <style name="details_icon_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@color/site_text_colour</item>
+    </style>
+
+    <style name="details_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/site_text_colour</item>
+        <item name="android:paddingEnd">@dimen/list_padding_side</item>
+        <item name="android:paddingStart">@dimen/list_padding_side</item>
+    </style>
+
+    <style name="details_basic_text">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">fill_horizontal</item>
+        <item name="android:textColor">@color/settings_summary</item>
+    </style>
+
+    <style name="details_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/site_text_colour</item>
+        <item name="android:paddingEnd">@dimen/list_padding_side</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="more_details_title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/site_text_colour</item>
+        <item name="android:paddingEnd">@dimen/list_padding_side</item>
+        <item name="android:paddingStart">@dimen/list_padding_side</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginStart">@dimen/list_padding_side</item>
+        <item name="android:layout_marginEnd">@dimen/list_padding_side</item>
+        <item name="android:background">@color/colorPrimaryLight</item>
     </style>
 
 </resources>

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="toogle_size">32dp</dimen>
+    <dimen name="toggle_size">32dp</dimen>
     <dimen name="list_padding_side">14dp</dimen>
     <dimen name="list_padding">12dp</dimen>
     <dimen name="thumb_margin">2dp</dimen>
     <dimen name="toggle_padding">5dp</dimen>
     <dimen name="thumbnail_size">64dp</dimen>
+    <dimen name="details_icon_size">68dp</dimen>
 </resources>

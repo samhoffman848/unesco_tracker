@@ -10,6 +10,7 @@
     <string name="sort_string">Sort by\u2026</string>
 
     <string name="sites_nav_string">All Sites</string>
+    <string name="details_nav_string">Site Details</string>
     <string name="bucket_nav_string">Bucket List</string>
     <string name="visited_nav_string">Visited</string>
     <string name="settings_nav_string">Settings</string>
@@ -41,5 +42,13 @@
     <string name="settings_theme_title">Use Dark Theme?</string>
 
     <string name="update_db_toast">Updating Database, please wait.</string>
+    <string name="finished_updating_db">Database Updated.</string>
 
+    <!-- Details -->
+    <string name="details_read_more">Read more</string>
+    <string name="details_location">Location:</string>
+    <string name="details_historical">Historical Information:</string>
+    <string name="details_justification">Justification:</string>
+    <string name="details_states">States:</string>
+    <string name="details_distance">Distance:</string>
 </resources>

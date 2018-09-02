@@ -35,7 +35,7 @@ public class SettingsActivity extends AppCompatActivity {
                     Toast.makeText(getActivity(), R.string.update_db_toast, Toast.LENGTH_SHORT).show();
 
                     boolean isConnected = isNetworkConnected();
-                    DatabaseManager.runDatabaseManager(isConnected);
+                    DatabaseManager.runDatabaseManager(isConnected, getActivity().getFilesDir());
                     return true;
                 }
             });

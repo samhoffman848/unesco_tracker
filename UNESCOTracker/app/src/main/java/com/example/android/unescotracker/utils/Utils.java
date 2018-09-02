@@ -1,5 +1,7 @@
 package com.example.android.unescotracker.utils;
 
+import android.text.Html;
+
 public final class Utils {
     public static final String LOG_TAG = Utils.class.getSimpleName();
 
@@ -16,7 +18,7 @@ public final class Utils {
             case 4:
                 return "Latin America and the Caribbean";
             default:
-                return null;
+                return "";
         }
     }
 
@@ -34,6 +36,19 @@ public final class Utils {
                 return 4;
             default:
                 return 5;
+        }
+    }
+
+    public static String mapIntCategory(int category){
+        switch (category){
+            case 0:
+                return "Natural";
+            case 1:
+                return "Cultural";
+            case 2:
+                return "Mixed";
+            default:
+                return "";
         }
     }
 

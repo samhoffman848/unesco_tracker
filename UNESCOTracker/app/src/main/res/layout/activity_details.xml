@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_background">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/list_padding_side"
+        android:paddingEnd="@dimen/list_padding_side"
+        android:paddingTop="@dimen/list_padding"
+        android:paddingBottom="@dimen/list_padding">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/thumbnail_view_details"
+            android:layout_marginTop="@dimen/thumb_margin"
+            android:layout_marginBottom="@dimen/thumb_margin"
+            android:layout_width="@dimen/thumbnail_size"
+            android:layout_height="@dimen/thumbnail_size"
+            android:layout_marginEnd="@dimen/list_padding"
+            app:civ_border_width="3dp"
+            app:civ_border_color="@color/colorAccentLight"
+            android:src="@mipmap/ic_launcher"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/site_name_details_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                android:text="TextView"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ToggleButton
+                android:id="@+id/favourite_details_toggle"
+                style="@style/list_toggle_button"
+                android:background="@drawable/favourite_selector"
+                android:backgroundTint="@color/colorPrimaryDark"/>
+
+            <ToggleButton
+                android:id="@+id/visited_details_toggle"
+                style="@style/list_toggle_button"
+                android:background="@drawable/visited_selector"
+                android:backgroundTint="@color/colorPrimaryDark"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/Divider"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/list_padding"
+            android:paddingBottom="@dimen/list_padding"
+            android:paddingStart="@dimen/list_padding_side"
+            android:paddingEnd="@dimen/list_padding_side">
+
+            <LinearLayout
+                style="@style/details_icon_list"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/category_details_icon"
+                    style="@style/details_icon"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:id="@+id/category_details_view"
+                    style="@style/details_icon_text"
+                    android:text="Category View"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/details_icon_list"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/region_details_icon"
+                    style="@style/details_icon"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:id="@+id/region_details_view"
+                    style="@style/details_icon_text"
+                    android:text="Region View"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/details_icon_list"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/date_details_icon"
+                    style="@style/details_icon"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:id="@+id/date_details_view"
+                    style="@style/details_icon_text"
+                    android:text="Date View"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/endangered_details_layout"
+                style="@style/details_icon_list"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/endangered_details_icon"
+                    style="@style/details_icon"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:id="@+id/endangered_details_view"
+                    style="@style/details_icon_text"
+                    android:text="Endangered View"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View style="@style/Divider"/>
+
+        <TextView
+            android:id="@+id/short_desc_details_view"
+            style="@style/details_text"
+            android:paddingTop="@dimen/list_padding"
+            android:text="lots of text"/>
+
+        <TextView
+            android:id="@+id/url_details_view"
+            style="@style/details_text"
+            android:paddingTop="@dimen/list_padding"
+            android:text="url link"/>
+
+        <com.github.florent37.expansionpanel.ExpansionHeader
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:expansion_headerIndicator="@id/headerIndicator"
+            app:expansion_layout="@id/expansionLayout"
+            app:expansion_toggleOnClick="true">
+
+            <!-- HEADER -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="@dimen/list_padding"
+                android:paddingBottom="@dimen/list_padding"
+                android:textColor="@color/location_text_colour"
+                android:text="@string/details_read_more"/>
+
+            <!-- HEADER INDICATOR -->
+            <android.support.v7.widget.AppCompatImageView
+                android:adjustViewBounds="true"
+                android:id="@+id/headerIndicator"
+                android:layout_gravity="center_vertical|right"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_width="wrap_content"
+                app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+
+        </com.github.florent37.expansionpanel.ExpansionHeader>
+
+        <com.github.florent37.expansionpanel.ExpansionLayout
+            android:id="@+id/expansionLayout"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <!-- CONTENT -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/long_desc_details_view"
+                    style="@style/details_text"
+                    android:paddingTop="@dimen/list_padding"
+                    android:text="lots of text"/>
+
+                <TextView
+                    android:id="@+id/historical_title_details_view"
+                    style="@style/more_details_title"
+                    android:text="@string/details_historical"/>
+
+                <TextView
+                    android:id="@+id/historical_desc_details_view"
+                    style="@style/details_text"
+                    android:paddingTop="@dimen/list_padding"
+                    android:text="lots of text"/>
+
+                <TextView
+                    android:id="@+id/justification_title_details_view"
+                    style="@style/more_details_title"
+                    android:text="@string/details_justification"/>
+
+                <TextView
+                    android:id="@+id/justification_details_view"
+                    style="@style/details_text"
+                    android:paddingTop="@dimen/list_padding"
+                    android:text="lots of text"/>
+            </LinearLayout>
+
+
+        </com.github.florent37.expansionpanel.ExpansionLayout>
+
+        <View style="@style/Divider"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/list_padding"
+            android:paddingBottom="@dimen/list_padding"
+            android:paddingStart="@dimen/list_padding_side"
+            android:paddingEnd="@dimen/list_padding_side"
+            android:columnCount="2">
+
+            <TextView
+                style="@style/details_title"
+                android:text="@string/details_location"/>
+
+            <TextView
+                android:id="@+id/location_details_view"
+                style="@style/details_basic_text"
+                android:text="Text View"/>
+
+            <TextView
+                style="@style/details_title"
+                android:text="@string/details_states"/>
+
+            <TextView
+                android:id="@+id/states_details_view"
+                style="@style/details_basic_text"
+                android:text="Text View"/>
+
+            <TextView
+                style="@style/details_title"
+                android:text="@string/details_distance"/>
+
+            <TextView
+                android:id="@+id/distance_details_view"
+                style="@style/details_basic_text"
+                android:text="Text View"/>
+        </GridLayout>
+
+    </LinearLayout>
+</ScrollView>

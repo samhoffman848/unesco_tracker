@@ -7,8 +7,8 @@ public class SiteItem {
     private String mRegion;
     private String mStates;
     private int mTransboundary;
-    private float mLongitude;
-    private float mLatitude;
+    private Double mLongitude;
+    private Double mLatitude;
     private String mCategory;
     private int mEndangered;
     private int mDateAdded;
@@ -23,7 +23,7 @@ public class SiteItem {
     private int mVisited;
 
     public SiteItem(int id, String name, String location, String region, String states,
-                    int transboundary, float longitude, float latitude, String category,
+                    int transboundary, Double longitude, Double latitude, String category,
                     int endangered, int dateAdded, String justification, String shortDesc,
                     String longDesc, String historicalDesc, String url, String imageUrl,
                     String thumb, int visited, int favourite){
@@ -67,10 +67,10 @@ public class SiteItem {
     public int getTransboundary() {
         return mTransboundary;
     }
-    public float getLongitude() {
+    public Double getLongitude() {
         return mLongitude;
     }
-    public float getLatitude() {
+    public Double getLatitude() {
         return mLatitude;
     }
     public String getCategory() {

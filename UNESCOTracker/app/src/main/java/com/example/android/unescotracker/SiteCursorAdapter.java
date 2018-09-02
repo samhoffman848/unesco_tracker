@@ -2,6 +2,7 @@ package com.example.android.unescotracker;
 
 import android.content.Context;
 import android.database.Cursor;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -83,8 +84,8 @@ public class SiteCursorAdapter extends CursorAdapter {
         Boolean favouriteBool = siteFavourite == 1;
         Boolean visitedBool = siteVisited == 1;
 
-        nameView.setText(siteName);
-        locationView.setText(siteLocation);
+        nameView.setText(Html.fromHtml(siteName));
+        locationView.setText(Html.fromHtml(siteLocation));
         favouriteToggle.setChecked(favouriteBool);
         visitedToggle.setChecked(visitedBool);
 

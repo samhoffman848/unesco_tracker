@@ -1,8 +1,11 @@
 package com.example.android.unescotracker;
 
-
-
+import android.app.Activity;
+import android.content.ContentUris;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
@@ -38,19 +41,23 @@ public class SiteListFragment extends Fragment implements LoaderManager.LoaderCa
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.all_site_fragment, container, false);
-
-        ListView petListView = (ListView) rootView.findViewById(R.id.site_list);
+        Log.d("Tracker App", "here!");
+        ListView siteListView = (ListView) rootView.findViewById(R.id.site_list);
 
         mEmptyListTextView = (TextView) getActivity().findViewById(R.id.empty_view);
-        petListView.setEmptyView(mEmptyListTextView);
+        siteListView.setEmptyView(mEmptyListTextView);
 
         mAdapter = new SiteCursorAdapter(getActivity(), null);
-        petListView.setAdapter(mAdapter);
+        siteListView.setAdapter(mAdapter);
 
-        petListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        siteListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int pos, long id) {
-                //todo: open details view
+                Log.d("Tracker App", "clicked!");
+                Intent intent = new Intent(getActivity(), DetailsActivity.class);
+                Uri currentPetUri = ContentUris.withAppendedId(SiteEntry.CONTENT_URI, id);
+                intent.setData(currentPetUri);
+                startActivity(intent);
             }
         });
 
@@ -75,6 +82,7 @@ public class SiteListFragment extends Fragment implements LoaderManager.LoaderCa
 
     @Override
     public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
+        // ToDo: Tidy up, should only actually need to query 1 or 2 things
         String[] projection = {
                 SiteEntry._ID,
                 SiteEntry.COLUMN_SITE_NAME,

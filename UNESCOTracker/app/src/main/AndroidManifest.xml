@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
+        android:name="com.example.android.unescotracker.UnescoApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/sites_nav_string"
@@ -26,6 +27,12 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.android.unescotracker.MainActivity"/>
+        </activity>
+        <activity
+            android:name=".DetailsActivity"
+            android:label="@string/details_nav_string"
+            android:theme="@style/PreferencesTheme"
+            android:parentActivityName=".MainActivity" >
         </activity>
         <provider
             android:authorities="com.example.android.UNESCOTracker"
